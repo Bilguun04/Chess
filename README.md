@@ -48,12 +48,6 @@ Make sure you have the following installed on your machine:
    cd chess
    ```
 
-3. Install the required dependencies:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
 ## Usage
 
 ### Playing the Chess Game

@@ -1,3 +1,5 @@
+from position import *
+
 class Piece:
     def __init__(self, white, name):
         self.white = white
@@ -12,7 +14,7 @@ class Piece:
 class King(Piece):
     def __init__(self, white):
         super().__init__(white, 'k')
-    
+
     def __str__(self):
         return super().__str__()
 
@@ -50,11 +52,3 @@ class Pawn(Piece):
         
     def __str__(self):
         return super().__str__()
-
-if __name__ == "__main__":
-    k = King(False)
-    print(k)
-    print(k.iswhite())
-    p = Pawn(False)
-    print(type(p))
-    print(p.iswhite())

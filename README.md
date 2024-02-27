@@ -39,13 +39,13 @@ Make sure you have the following installed on your machine:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/chess-game-and-chessbot.git
+   git clone https://github.com/yourusername/chess.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd chess-game-and-chessbot
+   cd chess
    ```
 
 3. Install the required dependencies:

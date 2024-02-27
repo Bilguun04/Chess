@@ -1,21 +1,6 @@
 from piece import *
-import chess
-
-class Position:
-    def __init__(self, x, y, piece = '.'):
-        self.x = x
-        self.y = y
-        self.piece = piece
-    
-    def __str__(self):
-        if not type(self.piece) == str:
-            return self.piece.name
-        return self.piece
-    
-    def isEmpty(self):
-        if self.piece == '.':
-            return True
-        return False
+from position import *
+from legalmove import *
 
 class Board:
     def __init__(self):
@@ -46,51 +31,25 @@ class Board:
             self.board[1][i] = Position(1, i, Pawn(False))
             self.board[6][i] = Position(6, i, Pawn(True))
     
-    def convert_board(self):
-        piece_mapping = {
-            'P': chess.PAWN,
-            'N': chess.KNIGHT,
-            'B': chess.BISHOP,
-            'R': chess.ROOK,
-            'Q': chess.QUEEN,
-            'K': chess.KING,
-            'p': chess.PAWN | chess.BLACK,
-            'n': chess.KNIGHT | chess.BLACK,
-            'b': chess.BISHOP | chess.BLACK,
-            'r': chess.ROOK | chess.BLACK,
-            'q': chess.QUEEN | chess.BLACK,
-            'k': chess.KING | chess.BLACK,
-            '.': None
-        }
-
-        for row_idx, row in enumerate(self.board):
-            for col_idx, piece_char in enumerate(row):
-                piece = piece_mapping.get(piece_char)
-                if piece is not None:
-                    square = chess.square(col_idx, 7 - row_idx)
-                    board.set_piece_at(square, piece)
-
-        return board
-    
     def move(self, user):
-        in_row = int(user[0])
-        in_col = int(user[1])
-        fin_row = int(user[2])
-        fin_col = int(user[3])
-        if self.board[in_row][in_col].piece == '.':
+        in_row = int(user[0][0])
+        in_col = int(user[0][1])
+        fin_row = int(user[1][0])
+        fin_col = int(user[1][1])
+
+        if type(self.board[in_row][in_col].piece) == str:
             return False
-        if self.board[fin_row][fin_col].piece == '.':
-            self.board[in_row][in_col], self.board[fin_row][fin_col] = '.', self.board[in_row][in_col]
+        if str(self.board[fin_row][fin_col]) == '.':
+            self.board[fin_row][fin_col].piece = self.board[in_row][in_col].piece
+            self.board[in_row][in_col].piece = '.'
             return True
-        if self.board[in_row][in_col].piece.white == self.board[fin_row][fin_col].piece.white:
-            return False
+        if self.board[in_row][in_col].piece.iswhite() != self.board[fin_row][fin_col].piece.iswhite():
+            self.board[fin_row][fin_col].piece = self.board[in_row][in_col].piece
+            self.board[in_row][in_col].piece = '.'
+            return True
+        return False
 
 if __name__ == "__main__":
-    board = chess.Board()
     b = Board()
-    b.reset_board()
-    b.board[2][5] = King(False)
-    b.board[0][4] = '.'
-    chess_board = b.convert_board()
-    print(chess_board)
+    print(b.move(['01', '20']))
     b.display()

@@ -48,8 +48,3 @@ class Board:
             self.board[in_row][in_col].piece = '.'
             return True
         return False
-
-if __name__ == "__main__":
-    b = Board()
-    print(b.move(['01', '20']))
-    b.display()

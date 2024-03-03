@@ -43,10 +43,15 @@ class TestLegalMove(unittest.TestCase):
             legalmove = p.generate_legal_moves(board.board[1][col].piece, [1, col])
             self.assertEqual(legalmove, [[2, col], [3, col]])
     
-    def king_is_Check(self):
+    def test_rook_legal_moves(self):
         board = Board()
-        board.board[0][4].piece = '.'
-        board.board[0][5].piece = King(False)
-        board.board[1][4].piece = King(True)
-        self.assertEqual(board.isCheck(True), True)
-        self.assertEqual(board.isCheck(False), False)
+        legalmove = LegalMove(board)
+
+        board.empty()
+        board.board[0][0] = Rook(True)
+        self.assertTrue(legalmove.isLegal(board.board[0][0], [0, 0], [0, 7]))
+
+        board.board[0][4] = Rook(True)
+        board.display()
+
+        self.assertFalse(legalmove.isLegal(board.board[0][0], [0, 0], [0, 7]))

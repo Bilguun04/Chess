@@ -54,26 +54,3 @@ class Board:
             self.board[in_row][in_col].piece = '.'
             return True
         return False
-    
-    def isCheck(self, white):
-        for row in self.board:
-            for position in row:
-                if position.piece != '.' and position.piece.iswhite() != white:
-                    legalmoves = LegalMove().generate_legal_moves(position.piece, [position.x, position.y])
-                    for move in legalmoves:
-                        if type(self.board[move[0]][move[1]].piece) == King:
-                            return True
-        return False
-    
-    def isCheckmate(self, white):
-        for row in self.board:
-            for position in row:
-                if position.piece != '.' and position.piece.iswhite() == white:
-                    legalmoves = LegalMove().generate_legal_moves(position.piece, [position.x, position.y])
-                    for move in legalmoves:
-                        if self.move([[position.x, position.y], move]):
-                            if not self.isCheck(white):
-                                self.move([move, [position.x, position.y]])
-                                return False
-                            self.move([move, [position.x, position.y]])
-        return True

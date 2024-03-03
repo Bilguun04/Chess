@@ -22,10 +22,6 @@ class TestBoard(unittest.TestCase):
         for item in range (8):
             self.assertEqual(str(b.board[1][item]), 'p')
 
-    def test_board__display(self):
-        b = Board()
-        b.display()
-
     def test_board__reset_board(self):
         b = Board()
         b.reset_board()
@@ -57,3 +53,10 @@ class TestBoard(unittest.TestCase):
         self.assertEqual(b.move(['60', '03']), True)
         self.assertEqual(str(b.board[6][0]), '.')
         self.assertEqual(str(b.board[0][3]), 'p')
+    
+    def test_board_is_empty(self):
+        b = Board()
+        b.empty()
+        for row in b.board:
+            for item in row:
+                self.assertEqual(str(item), '.')

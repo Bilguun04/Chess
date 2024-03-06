@@ -21,6 +21,7 @@ class King(Piece):
 class Queen(Piece):
     def __init__(self, white):
         super().__init__(white, 'q')
+        self.point = 9
     
     def __str__(self):
         return super().__str__()
@@ -28,6 +29,7 @@ class Queen(Piece):
 class Bishop(Piece):
     def __init__(self, white):
         super().__init__(white, 'b')
+        self.point = 3
     
     def __str__(self):
         return super().__str__()
@@ -35,6 +37,7 @@ class Bishop(Piece):
 class Knight(Piece):
     def __init__(self, white):
         super().__init__(white, 'n')
+        self.point = 3
     
     def __str__(self):
         return super().__str__()
@@ -42,6 +45,7 @@ class Knight(Piece):
 class Rook(Piece):
     def __init__(self, white):
         super().__init__(white, 'r')
+        self.point = 5
         
     def __str__(self):
         return super().__str__()
@@ -49,6 +53,7 @@ class Rook(Piece):
 class Pawn(Piece):
     def __init__(self, white):
         super().__init__(white, 'p')
+        self.point = 1
         
     def __str__(self):
         return super().__str__()

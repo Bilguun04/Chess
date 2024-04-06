@@ -1,7 +1,16 @@
-package chess;
+package ca.mcgill.ecse.wareflow.features;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.List;
 import java.util.Map;
+import ca.mcgill.ecse.wareflow.application.WareFlowApplication;
+import ca.mcgill.ecse.wareflow.controller.UserController;
+import ca.mcgill.ecse.wareflow.model.Client;
+import ca.mcgill.ecse.wareflow.model.Manager;
+import ca.mcgill.ecse.wareflow.model.User;
+import ca.mcgill.ecse.wareflow.model.WareFlow;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

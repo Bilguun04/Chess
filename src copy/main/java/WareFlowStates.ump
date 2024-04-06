@@ -1,0 +1,38 @@
+class ShipmentOrder {
+  
+  status {
+    
+    Open {
+ 
+      assignShipmentOrder(WarehouseStaff staff,TimeEstimate timeToComplete, PriorityLevel priority, boolean toBeApproved)/{
+  doAssignShipmentOrder(staff,timeToComplete,priority,toBeApproved)
+        } -> Assigned;
+      }
+    
+    Assigned {
+      startShipmentOrder() -> InProgress;
+      }
+    
+    InProgress {
+      completeShipmentOrder()[toBeApproved()] ->Completed;
+      completeShipmentOrder()[!toBeApproved()] -> Closed;
+      }
+    
+    Completed {
+      disapproveShipmentOrder(Date date,String reason)/{
+        doDisapproveShipmentOrder(date,reason)} -> InProgress;
+      approveShipmentOrder() -> Closed;
+    }
+    
+    Closed{
+    }
+  }
+  
+   private void doAssignShipmentOrder(WarehouseStaff staff,TimeEstimate timeToComplete,PriorityLevel priority,boolean toBeApproved){
+    } 
+  private boolean toBeApproved() {
+    return this.toBeApproved();
+  }
+  private void doDisapproveShipmentOrder(Date date,String reason) {
+  }
+}

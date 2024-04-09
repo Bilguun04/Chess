@@ -1,0 +1,65 @@
+namespace Chess;
+
+class Position
+{
+  char x;
+  int y;
+}
+
+class Move
+{
+  1 -- 2 Position;
+}
+
+class Piece
+{
+  name;
+  Boolean iswhite;
+  List<Position> moves;
+}
+
+class Rook
+{
+  isA Piece;
+}
+
+class Knight
+{
+  isA Piece;
+}
+
+class Bishop
+{
+  isA Piece;
+}
+
+class Queen
+{
+  isA Piece;
+}
+
+class King
+{
+  isA Piece;
+}
+
+class Pawn
+{
+  isA Piece;
+}
+
+class Board
+{
+  1 -- * Position;
+}
+
+class Player
+{
+  Boolean isWhite;
+  Boolean isTurn;
+}
+
+class Game
+{
+  1 -- * Player;
+}

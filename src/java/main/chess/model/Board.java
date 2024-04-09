@@ -1,26 +1,26 @@
 /*PLEASE DO NOT EDIT THIS CODE*/
 /*This code was generated using the UMPLE 1.33.0.6934.a386b0a58 modeling language!*/
 
-package Chess;
+package java.main.chess.model;
 import java.util.*;
 
-// line 10 "../../model.ump"
-// line 127 "../../model.ump"
-public class Move
+// line 52 "../../model.ump"
+// line 110 "../../model.ump"
+public class Board
 {
 
   //------------------------
   // MEMBER VARIABLES
   //------------------------
 
-  //Move Associations
+  //Board Associations
   private List<Position> positions;
 
   //------------------------
   // CONSTRUCTOR
   //------------------------
 
-  public Move()
+  public Board()
   {
     positions = new ArrayList<Position>();
   }
@@ -58,60 +58,26 @@ public class Move
     int index = positions.indexOf(aPosition);
     return index;
   }
-  /* Code from template association_IsNumberOfValidMethod */
-  public boolean isNumberOfPositionsValid()
-  {
-    boolean isValid = numberOfPositions() >= minimumNumberOfPositions() && numberOfPositions() <= maximumNumberOfPositions();
-    return isValid;
-  }
-  /* Code from template association_RequiredNumberOfMethod */
-  public static int requiredNumberOfPositions()
-  {
-    return 2;
-  }
   /* Code from template association_MinimumNumberOfMethod */
   public static int minimumNumberOfPositions()
   {
-    return 2;
+    return 0;
   }
-  /* Code from template association_MaximumNumberOfMethod */
-  public static int maximumNumberOfPositions()
+  /* Code from template association_AddManyToOne */
+  public Position addPosition(char aX, int aY, Move aMove)
   {
-    return 2;
-  }
-  /* Code from template association_AddMNToOnlyOne */
-  public Position addPosition(char aX, int aY, Board aBoard)
-  {
-    if (numberOfPositions() >= maximumNumberOfPositions())
-    {
-      return null;
-    }
-    else
-    {
-      return new Position(aX, aY, this, aBoard);
-    }
+    return new Position(aX, aY, aMove, this);
   }
 
   public boolean addPosition(Position aPosition)
   {
     boolean wasAdded = false;
     if (positions.contains(aPosition)) { return false; }
-    if (numberOfPositions() >= maximumNumberOfPositions())
+    Board existingBoard = aPosition.getBoard();
+    boolean isNewBoard = existingBoard != null && !this.equals(existingBoard);
+    if (isNewBoard)
     {
-      return wasAdded;
-    }
-
-    Move existingMove = aPosition.getMove();
-    boolean isNewMove = existingMove != null && !this.equals(existingMove);
-
-    if (isNewMove && existingMove.numberOfPositions() <= minimumNumberOfPositions())
-    {
-      return wasAdded;
-    }
-
-    if (isNewMove)
-    {
-      aPosition.setMove(this);
+      aPosition.setBoard(this);
     }
     else
     {
@@ -124,20 +90,45 @@ public class Move
   public boolean removePosition(Position aPosition)
   {
     boolean wasRemoved = false;
-    //Unable to remove aPosition, as it must always have a move
-    if (this.equals(aPosition.getMove()))
+    //Unable to remove aPosition, as it must always have a board
+    if (!this.equals(aPosition.getBoard()))
     {
-      return wasRemoved;
+      positions.remove(aPosition);
+      wasRemoved = true;
     }
-
-    //move already at minimum (2)
-    if (numberOfPositions() <= minimumNumberOfPositions())
-    {
-      return wasRemoved;
-    }
-    positions.remove(aPosition);
-    wasRemoved = true;
     return wasRemoved;
+  }
+  /* Code from template association_AddIndexControlFunctions */
+  public boolean addPositionAt(Position aPosition, int index)
+  {  
+    boolean wasAdded = false;
+    if(addPosition(aPosition))
+    {
+      if(index < 0 ) { index = 0; }
+      if(index > numberOfPositions()) { index = numberOfPositions() - 1; }
+      positions.remove(aPosition);
+      positions.add(index, aPosition);
+      wasAdded = true;
+    }
+    return wasAdded;
+  }
+
+  public boolean addOrMovePositionAt(Position aPosition, int index)
+  {
+    boolean wasAdded = false;
+    if(positions.contains(aPosition))
+    {
+      if(index < 0 ) { index = 0; }
+      if(index > numberOfPositions()) { index = numberOfPositions() - 1; }
+      positions.remove(aPosition);
+      positions.add(index, aPosition);
+      wasAdded = true;
+    } 
+    else 
+    {
+      wasAdded = addPositionAt(aPosition, index);
+    }
+    return wasAdded;
   }
 
   public void delete()

@@ -1,7 +1,7 @@
 /*PLEASE DO NOT EDIT THIS CODE*/
 /*This code was generated using the UMPLE 1.33.0.6934.a386b0a58 modeling language!*/
 
-package Chess;
+package java.main.chess.model;
 
 // line 4 "../../model.ump"
 // line 70 "../../model.ump"

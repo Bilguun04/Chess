@@ -1,11 +1,13 @@
 /*PLEASE DO NOT EDIT THIS CODE*/
 /*This code was generated using the UMPLE 1.33.0.6934.a386b0a58 modeling language!*/
 
-package Chess;
+package java.main.chess.model;
 
-// line 47 "../../model.ump"
-// line 105 "../../model.ump"
-public class Pawn extends Piece
+import java.util.*;
+
+// line 27 "../../model.ump"
+// line 85 "../../model.ump"
+public class Knight extends Piece
 {
 
   //------------------------
@@ -16,7 +18,7 @@ public class Pawn extends Piece
   // CONSTRUCTOR
   //------------------------
 
-  public Pawn(String aName, boolean aIswhite, List<Position> aMoves)
+  public Knight(String aName, boolean aIswhite, List<Position> aMoves)
   {
     super(aName, aIswhite, aMoves);
   }

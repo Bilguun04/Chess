@@ -1,11 +1,11 @@
 /*PLEASE DO NOT EDIT THIS CODE*/
 /*This code was generated using the UMPLE 1.33.0.6934.a386b0a58 modeling language!*/
 
-package main.java.model;
+package Chess;
 import java.util.*;
 
-// line 47 "../../model.ump"
-// line 94 "../../model.ump"
+// line 52 "../../model.ump"
+// line 110 "../../model.ump"
 public class Board
 {
 
@@ -64,9 +64,9 @@ public class Board
     return 0;
   }
   /* Code from template association_AddManyToOne */
-  public Position addPosition(char aX, int aY)
+  public Position addPosition(char aX, int aY, Move aMove)
   {
-    return new Position(aX, aY, this);
+    return new Position(aX, aY, aMove, this);
   }
 
   public boolean addPosition(Position aPosition)

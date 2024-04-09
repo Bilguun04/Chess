@@ -1,12 +1,10 @@
 /*PLEASE DO NOT EDIT THIS CODE*/
 /*This code was generated using the UMPLE 1.33.0.6934.a386b0a58 modeling language!*/
 
-package main.java.model;
+package Chess;
 
-import java.util.*;
-
-// line 10 "../../model.ump"
-// line 59 "../../model.ump"
+// line 15 "../../model.ump"
+// line 75 "../../model.ump"
 public class Piece
 {
 

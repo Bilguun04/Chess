@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="364ce6a6-77aa-456c-8b47-6652326f4721" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src copy/main/java/WareFlow.ump" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/main/java/WareFlowConstraints.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/main/java/WareFlowStates.ump" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/main/java/WareFlowTransferObjects.ump" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/main/java/ca/mcgill/ecse/wareflow/application/WareFlowApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/main/java/ca/mcgill/ecse/wareflow/controller/ItemContainerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/main/java/ca/mcgill/ecse/wareflow/controller/ItemTypeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/main/java/ca/mcgill/ecse/wareflow/controller/ShipmentNoteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/main/java/ca/mcgill/ecse/wareflow/controller/ShipmentOrderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/main/java/ca/mcgill/ecse/wareflow/controller/TOShipmentNote.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/main/java/ca/mcgill/ecse/wareflow/controller/TOShipmentOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/main/java/ca/mcgill/ecse/wareflow/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/main/java/ca/mcgill/ecse/wareflow/model/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/main/java/ca/mcgill/ecse/wareflow/model/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/main/java/ca/mcgill/ecse/wareflow/model/ItemContainer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/main/java/ca/mcgill/ecse/wareflow/model/ItemType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/main/java/ca/mcgill/ecse/wareflow/model/Manager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/main/java/ca/mcgill/ecse/wareflow/model/ShipmentNote.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/main/java/ca/mcgill/ecse/wareflow/model/ShipmentOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/main/java/ca/mcgill/ecse/wareflow/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/main/java/ca/mcgill/ecse/wareflow/model/WareFlow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/main/java/ca/mcgill/ecse/wareflow/model/WarehouseStaff.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/main/resources/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/java/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/java/ca/mcgill/ecse/wareflow/features/AddAndUpdateClientStepDefinitions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/java/ca/mcgill/ecse/wareflow/features/AddAndUpdateEmployeeStepDefinitions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/java/ca/mcgill/ecse/wareflow/features/AddAndUpdateItemContainerStepDefinitions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/java/ca/mcgill/ecse/wareflow/features/AddAndUpdateItemTypeStepDefinitions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/java/ca/mcgill/ecse/wareflow/features/AddAndUpdateNoteToShipmentOrderStepDefinitions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/java/ca/mcgill/ecse/wareflow/features/AddAndUpdateShipmentOrderStepDefinitions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/java/ca/mcgill/ecse/wareflow/features/CommonStepDefinitions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/java/ca/mcgill/ecse/wareflow/features/CucumberFeaturesTestRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/java/ca/mcgill/ecse/wareflow/features/DeleteClientStepDefinitions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/java/ca/mcgill/ecse/wareflow/features/DeleteEmployeeStepDefinitions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/java/ca/mcgill/ecse/wareflow/features/DeleteItemContainerStepDefinitions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/java/ca/mcgill/ecse/wareflow/features/DeleteItemTypeStepDefinitions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/java/ca/mcgill/ecse/wareflow/features/DeleteShipmentNoteStepDefinitions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/java/ca/mcgill/ecse/wareflow/features/DeleteShipmentOrderStepDefinitions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/java/ca/mcgill/ecse/wareflow/features/ShipmentOrderStepDefinitions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/java/ca/mcgill/ecse/wareflow/features/UpdateManagerStepDefinitions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/java/ca/mcgill/ecse/wareflow/features/ViewStatusOfShipmentOrderStepDefinitions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/resources/AddAndUpdateClient.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/resources/AddAndUpdateEmployee.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/resources/AddAndUpdateItemContainer.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/resources/AddAndUpdateItemType.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/resources/AddAndUpdateNoteToShipmentOrder.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/resources/AddAndUpdateShipmentOrder.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/resources/DeleteClient.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/resources/DeleteEmployee.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/resources/DeleteItemContainer.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/resources/DeleteItemType.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/resources/DeleteShipmentNote.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/resources/DeleteShipmentOrder.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/resources/EnhancedViewStatusOfShipmentOrder.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/resources/ProcessShipmentOrder.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/resources/UpdateManager.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src copy/test/resources/ViewStatusOfShipmentOrder.feature" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Bilguun04"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="5f294769-a6a8-4929-bcb0-d8e7d400aefa" />
+        <option name="url" value="https://github.com/Bilguun04/Chess.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2esq5X5wQs4swrD9NC9dYbHLhsh" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="openDirectoriesWithSingleClick" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "java",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-4caba194b151-23eed401" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="364ce6a6-77aa-456c-8b47-6652326f4721" name="Changes" comment="" />
+      <created>1712703453269</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712703453269</updated>
+    </task>
+    <servers />
+  </component>
+</project>
